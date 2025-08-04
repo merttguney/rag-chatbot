@@ -16,8 +16,9 @@ Bu proje, **Retrieval-Augmented Generation (RAG)** teknolojisini kullanarak Lean
 
 ### Hızlı Başlangıç
 ```bash
-# 1. Depoyu klonlayın veya indirin
-cd RagAIChatbot
+# 1. Repository'yi klonlayın
+git clone https://github.com/merttguney/rag-chatbot.git
+cd rag-chatbot
 
 # 2. Sanal ortam oluşturun ve aktive edin
 python -m venv .venv
@@ -135,3 +136,6 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 ---
 
 **LeanCart Global RAG Chatbot** - Akıllı Admin Panel Asistanı 🤖✨
+
+## 🔗 Repository
+GitHub: https://github.com/merttguney/rag-chatbot
