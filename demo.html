@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wi        .chatbot-header {
+            background: linear-gradient(135deg, #155342 0%, #0f3d2e 100%);
+            color: white;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 60px;
+        }e-width, initial-scale=1.0">
+    <title>LeanCart Global - Admin Panel Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a1f18 0%, #1a2a24 100%);
+            min-height: 100vh;
+            position: relative;
+            color: #ffffff;
+        }
+        
+        .demo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .demo-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a332a 0%, #2a4a3a 100%);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border: 1px solid rgba(124, 160, 133, 0.2);
+        }
+        
+        .demo-header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .demo-subtitle {
+            color: #9bc3a3;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .chatbot-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #155342 0%, #0f3d2e 100%);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(21, 83, 66, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(21, 83, 66, 0.4);
+        }
+        
+        .chatbot-button::before {
+            content: "💬";
+            font-size: 24px;
+        }
+        
+        .chatbot-container {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            width: 380px;
+            height: 600px;
+            background: #1a2a24;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            z-index: 1001;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: 1px solid rgba(124, 160, 133, 0.2);
+        }
+        
+        .chatbot-container.active {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #155342 0%, #0f3d2e 100%);
+            color: white;
+            padding: 24px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 60px;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .refresh-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+        
+        .refresh-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .refresh-btn::before {
+            content: "🔄";
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .close-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 8px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .chatbot-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }        /* Chatbot iframe içeriği için özel düzenlemeler */
+        .chatbot-container iframe {
+            border: none;
+            background: #0f221a;
+        }
+        
+        /* Demo sayfasında chatbot için özel stil düzenlemeleri */
+        .chatbot-container {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .chatbot-container {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Demo sayfası chatbot düzenlemeleri */
+        .chatbot-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0; 
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-content {
+                padding: 20px;
+            }
+            
+            .demo-header h1 {
+                font-size: 2rem;
+            }
+            
+            .chatbot-container {
+                right: 16px;
+                left: 16px;
+                width: auto;
+                bottom: 90px;
+            }
+            
+            .chatbot-button {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-content">
+            <div class="demo-header">
+                <h1>🏪 LeanCart Global</h1>
+                <p class="demo-subtitle">E-Commerce Admin Panel</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="chatbot-button" onclick="toggleChatbot()"></button>
+    
+    <div class="chatbot-container" id="chatbotContainer">
+        <iframe class="chatbot-iframe" src="http://localhost:8086?demo=true" title="Admin Panel AI Asistan" style="height: 600px; width: 100%;" onload="handleIframeLoad(this)"></iframe>
+    </div>
+    
+    <script>
+        let isOpen = false;
+        
+        function toggleChatbot() {
+            console.log('toggleChatbot çağrıldı');
+            const container = document.getElementById('chatbotContainer');
+            console.log('Container bulundu:', container);
+            
+            if (!container) {
+                console.error('Container bulunamadı!');
+                return;
+            }
+            
+            isOpen = !isOpen;
+            console.log('isOpen durumu:', isOpen);
+            
+            if (isOpen) {
+                container.classList.add('active');
+                console.log('Active class eklendi');
+            } else {
+                container.classList.remove('active'); 
+                console.log('Active class kaldırıldı');
+            }
+        }
+        
+        function handleIframeLoad(iframe) {
+            try {
+                // Add demo-mode class to iframe body
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (iframeDoc && iframeDoc.body) {
+                    iframeDoc.body.classList.add('demo-mode');
+                }
+            } catch (e) {
+                // Cross-origin restrictions - this is handled by CSS in the main app
+                console.log('Demo mode styling handled by main app CSS');
+            }
+        }
+        
+        // Make functions available to iframe
+        window.refreshChatbot = function() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            if (iframe) {
+                iframe.src = iframe.src; // Reload iframe
+            }
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isOpen) {
+                toggleChatbot();
+            }
+        });
+        
+        // Demo sayfası için ek düzenlemeler
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chatbot container için ek CSS düzenlemeleri
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            if (chatbotContainer) {
+                chatbotContainer.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+            }
+        });
+    </script>
+</body>
+</html>

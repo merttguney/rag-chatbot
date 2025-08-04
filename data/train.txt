@@ -1,0 +1,233 @@
+# LeanCart Global E-Ticaret Admin Panel - Detaylı Kullanım Kılavuzu
+
+## Dashboard (Ana Sayfa)
+Dashboard, admin paneline giriş yaptığınızda karşınıza çıkan ana sayfadır. Burada sistemin genel durumunu görebilirsiniz:
+- Recent Orders (Son Siparişler) listesi
+- Sistem istatistikleri
+- Hızlı erişim menüleri
+
+## Kampanya Yönetimi
+
+### Kampanya Nasıl Oluşturulur?
+1. Sol menüden "Kampanya" seçeneğine tıklayın
+2. "+" (Yeni Ekle) butonuna basın
+3. Kampanya bilgilerini doldurun:
+   - Kampanya Adı: Kampanyanızın ismini girin
+   - Başlangıç Tarihi: Kampanyanın ne zaman başlayacağını seçin
+   - Bitiş Tarihi: Kampanyanın ne zaman biteceğini belirleyin
+   - Uygulama Alanı: Hangi ürünlere uygulanacağını seçin (product)
+   - İndirim Oranı: % olarak indirim miktarını belirleyin
+4. "Kaydet" butonuna tıklayın
+
+### Kampanya Türleri
+- **Ürün Kampanyaları**: Belirli ürünlerde indirim
+- **Kategori Kampanyaları**: Tüm kategori için geçerli indirimler
+- **Genel Kampanyalar**: Site genelinde geçerli promosyonlar
+
+Örnek kampanyalar:
+- Kampanya-31504: Güncel kampanya, %20 indirim
+- Kampanya-20002: %13 indirimli kampanya
+- Kampanya-68801: %13 indirimli ürün kampanyası
+
+## Kategori Yönetimi
+
+### Yeni Kategori Nasıl Eklenir?
+1. Sol menüden "Kategori" seçeneğine tıklayın
+2. Kategori hiyerarşisini görün (Root > Alt kategoriler)
+3. "+" butonuna tıklayarak yeni kategori ekleyin
+4. Kategori bilgilerini girin:
+   - **Name**: Kategori adı (hem Türkçe hem İngilizce)
+   - **Description**: Kategori açıklaması
+   - **Meta Title**: SEO için başlık
+   - **Kategori Adı**: Mağaza görünümü için kategori adı
+
+### Kategori Çevirileri
+Sistem çoklu dil desteği sunmaktadır:
+- **bayer-en (İngilizce)**: Uluslararası müşteriler için
+- **bayer-tr (Türkçe)**: Türk müşteriler için
+
+### Kategori Örnekleri
+Sistemde bulunan ana kategoriler:
+- **Foto ve Kamera**: Fotoğraf makineleri ve aksesuarları
+- **TV & Ses**: Televizyon ve ses sistemleri
+- **Giyilebilir Teknoloji**: Akıllı saatler ve benzeri
+- **Bilgisayar ve Tablet**: Laptop, tablet, masaüstü
+- **Cep Telefonu**: Akıllı telefonlar ve aksesuarları
+- **Akıllı Saat**: Wearable teknoloji ürünleri
+
+## Mağaza Yönetimi
+
+### Mağaza Kurulumu
+1. "Mağaza" menüsünden mağaza ayarlarına gidin
+2. Mağaza bilgilerini düzenleyin:
+   - **Mağaza Adı**: "Lean Cart Elektronik Mağaza"
+   - **Web Sitesi**: "bayer-giyim" gibi domain bilgisi
+   - **Mağaza Görünümü**: Vitrin düzeni ayarları
+   - **Oluşturma/Güncellenme Tarihleri**: Sistem otomatik takip eder
+
+## Şehir/Lokasyon Yönetimi
+
+### Şehir Ekleme
+1. "Meta > Şehir" menüsüne gidin
+2. Şehir listesini görüntüleyin
+3. Yeni şehir eklemek için "+" butonunu kullanın
+
+Sistemde bulunan şehirler:
+- **Artvin** (ID: 11)
+- **Sakarya** (ID: 9)  
+- **Diyarbakır** (ID: 7)
+- **İstanbul** (ID: 5)
+
+## Müşteri Yönetimi
+
+### Müşteri Bilgileri
+Müşteri yönetimi sayfasında şu bilgileri görebilirsiniz:
+- **Ad Soyad**: Müşteri ismi
+- **Cinsiyet**: Erkek/Kadın
+- **Doğum Tarihi**: Müşteri yaşı bilgisi
+- **Adres**: Teslimat adresi
+- **Kullanıcı**: Aktif/Pasif durum
+- **Oluşturma/Güncellenme Tarihleri**
+
+Örnek müşteri kayıtları:
+- **İbrahim**: Erkek, doğum 1985-07-01, telefon +905550002222
+- **Ahmet Yiğit**: Erkek, doğum 1983-10-25, Ev Anne adresli
+
+### Bülten Abonelikleri
+Müşteri altında "Bülten Abonelikleri" bölümünde:
+- E-posta adresleri
+- Abonelik tarihleri
+- Güncellenme bilgileri takip edilir
+
+## Özellik Yönetimi
+
+### Ürün Özellikleri
+Ürünlere eklenebilecek özellik türleri:
+
+#### Filtre Özellikleri
+- **Filtre Çapı**: 58mm, 77mm gibi lens çapları
+- **Diyafram Açıklığı**: f/1.8, f/1.4, f/2.8 gibi değerler
+- **Odak Uzaklığı**: 35mm, 50mm gibi focal length
+
+#### Teknik Özellikler
+- **Video Kayıt**: HD(720p), 2K, 4K çözünürlük seçenekleri
+- **Sensör Tipi**: CCD, CMOS sensör türleri
+- **Film Kapasitesi**: 10 exposure, 20 exposure
+- **Garanti Tipi**: İthalatçı Garantili, İmporte garanti
+
+#### Ürün Özellikleri
+- **Baskı Türü**: Instax Mini, Instax Mini türü
+- **Optik Zoom**: 10-20x, 15-30x gibi zoom oranları
+
+### Özellik Setleri
+Kategorilere göre özellik grupları:
+- **Foto**: Kamera ve fotoğraf ekipmanları
+- **Fotoğraf Makinesi**: Profesyonel kameralar
+- **Video Kamera**: Video kayıt cihazları
+- **Kamera Lensleri**: Objektif ve aksesuarlar
+- **Dijital Fotoğraf Makinesi**: Digital kameralar
+- **Şipşak Fotoğraf Makinesi**: Instant kameralar
+- **Akıllı Saat**: Wearable teknoloji
+- **Aksiyon Kamerası**: Action cam ve sporcu kameraları
+- **Cep Telefonu**: Smartphone özellikleri
+
+## Sipariş Yönetimi
+
+### Sipariş Durumları
+Sipariş listesinde görebileceğiniz durumlar:
+- **Completed**: Tamamlanmış siparişler
+- **New**: Yeni gelen siparişler
+- **Processing**: İşlem halindeki siparişler
+
+### Sipariş Bilgileri
+Her siparişte şu bilgiler yer alır:
+- **Bill To**: Fatura adresi
+- **Ship To**: Teslimat adresi
+- **Total**: Toplam tutar
+- **Currency**: Para birimi (TRY)
+- **Status**: Sipariş durumu
+- **Quote**: Teklif numarası
+
+Örnek sipariş: Ahmet Güncel'e ait 150 TRY tutarında tamamlanmış sipariş
+
+## Sepet Yönetimi
+
+### Sepet Takibi
+Sepet yönetimi sayfasında:
+- **Müşteri bilgileri**: Ad, soyad, e-posta, telefon
+- **Durum**: new, active gibi sepet durumları
+- **Oluşturma Tarihi**: Sepet oluşturulma zamanı
+- **Güncellenme Tarihi**: Son güncelleme
+- **Mağaza**: Hangi mağazaya ait sepet
+- **Müşteri**: Sepet sahibi
+
+## Ürün Yönetimi
+
+### Ürün Ekleme
+1. "Ürün" menüsünden "Yeni Ürün" seçin
+2. Ürün bilgilerini doldurun:
+   - **Resim**: Ürün görseli yükleyin
+   - **Ürün Adı**: test-22, teset-2 gibi benzersiz isim
+   - **Görünürlük**: catalogsearch (arama sonuçlarında görünme)
+   - **Tür**: configurable (varyantlı), simple (tek varyant)
+   - **Ana Kategori**: Ürünün ait olduğu kategori
+   - **Kategori**: Alt kategori seçimi
+   - **Varyantlar**: Renk, beden, model seçenekleri
+   - **Durum**: Aktif/Pasif ürün durumu
+
+### Ürün Örnekleri
+Sistemde bulunan ürün örnekleri:
+- **test-22**: Foto ve Kamera kategorisinde configurable ürün
+- **teset-2**: Foto ve Kamera kategorisinde simple ürün  
+- **test-sekooo**: Cep Telefonu kategorisinde simple ürün
+- **Dell Monitör 80**: Akıllı Saat kategorisinde simple ürün
+- **Xbox Series X 79**: Bilgisayar ve Tablet kategorisinde simple ürün
+
+### Ürün Durumları
+- **Active**: Satışta olan ürünler
+- **Inactive**: Satıştan kaldırılan ürünler
+- **Out of Stock**: Stokta olmayan ürünler
+
+## Vergi Yönetimi
+
+### Vergi Oranları
+Sistemde tanımlı vergi oranları:
+- **Vergi-1399**: %15 vergi oranı
+- **KDV**: %18 KDV oranı
+
+### Vergi Hesaplama
+- Vergi oranları ürün fiyatlarına otomatik eklenir
+- Fatura hesaplamasında vergi detayları gösterilir
+- Raporlarda vergi toplamları ayrı görüntülenir
+
+## Sık Sorulan Sorular
+
+### S: Ürün nasıl aktif/pasif yapılır?
+C: Ürün listesinde ürünün yanındaki toggle butonunu kullanarak ürünü aktif/pasif yapabilirsiniz.
+
+### S: Kampanya nasıl düzenlenir?
+C: Kampanya listesinde düzenlemek istediğiniz kampanyanın yanındaki "Düzenle" ikonuna tıklayın.
+
+### S: Yeni kategori nasıl eklenir?
+C: Kategori sayfasında "+" butonuna tıklayarak yeni kategori ekleyebilirsiniz. Ana kategori veya alt kategori seçimi yapabilirsiniz.
+
+### S: Müşteri bilgileri nasıl güncellenir?
+C: Müşteri listesinden ilgili müşteriyi seçin ve "Düzenle" butonuna tıklayarak bilgileri güncelleyebilirsiniz.
+
+### S: Sipariş durumu nasıl değiştirilir?
+C: Sipariş detayına girip durum alanından yeni durumu seçerek kaydedebilirsiniz.
+
+### S: Ürün özellikleri nasıl eklenir?
+C: Ürün düzenleme sayfasında "Özellikler" sekmesine geçip yeni özellik ekleyebilirsiniz.
+
+### S: Mağaza bilgileri nerede güncellenir?
+C: Sol menüden "Mağaza" seçeneğine tıklayarak mağaza ayarlarını düzenleyebilirsiniz.
+
+### S: Vergi oranları nasıl ayarlanır?
+C: "Vergi" menüsünden mevcut vergi oranlarını görüntüleyebilir ve yeni vergi oranları ekleyebilirsiniz.
+
+### S: Sepet içeriği nasıl görülür?
+C: "Sepet" menüsünden aktif sepetleri görüntüleyebilir ve içeriklerini kontrol edebilirsiniz.
+
+### S: Bülten aboneleri nasıl yönetilir?
+C: Müşteri yönetimi altındaki "Bülten Abonelikleri" bölümünden e-posta listelerini yönetebilirsiniz.
